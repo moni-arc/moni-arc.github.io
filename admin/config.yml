@@ -1,5 +1,6 @@
 backend:
-  name: web
+  name: github
+  repo: moni-arc/moni-arc.github.io
 
 media_folder: static/assets
 
