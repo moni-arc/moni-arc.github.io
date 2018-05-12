@@ -1,6 +1,7 @@
 backend:
-  name: github
+  name: git-gateway
   repo: moni-arc/moni-arc.github.io
+  branch: source
 
 media_folder: static/assets
 
