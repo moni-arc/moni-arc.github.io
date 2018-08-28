@@ -28,7 +28,7 @@ collections:
       - { name: mainImage, label: Main Image, widget: image }
       - name: additionalImages
         label: Additional Images
-        widget: List
+        widget: list
         fields:
           - { name: image, label: Image, widget: image }
           - { name: description, label: Description }
