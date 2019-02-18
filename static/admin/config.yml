@@ -12,24 +12,24 @@ collections:
     folder: blog
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown } 
+      - {name: path, label: Path}
+      - {name: date, label: Date, widget: date}
+      - {name: title, label: Title}
+      - {name: body, label: Body, widget: markdown}
   - name: artwork
     label: Artwork
     folder: artwork
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: postDate, label: Post Date, widget: date }
-      - { name: creationDate, label Creation Date, widget: date }
-      - { name: title, label: Title }
-      - { name: description, label: Description }
-      - { name: mainImage, label: Main Image, widget: image }
+      - {name: path, label: Path}
+      - {name: postDate, label: Post Date, widget: date}
+      - {name: creationDate, label Creation Date, widget: date}
+      - {name: title, label: Title}
+      - {name: description, label: Description}
+      - {name: mainImage, label: Main Image, widget: image}
       - name: additionalImages
         label: Additional Images
         widget: list
         fields:
-          - { name: image, label: Image, widget: image }
-          - { name: description, label: Description }
+          - {name: image, label: Image, widget: image}
+          - {name: description, label: Description}
