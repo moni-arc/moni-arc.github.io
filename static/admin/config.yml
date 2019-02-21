@@ -28,9 +28,7 @@ collections:
           label: 'Additional Images',
           name: 'additionalImages',
           widget: 'list',
-          fields:
-            - {label: 'Image', name: 'image', widget: 'image'}
-            - {label: 'Description', name: 'description'}
+          fields: [{label: 'Image', name: 'image', widget: 'image'},{label: 'Description', name: 'description'}]
         }
   - name: 'blog'
     label: 'Blog'
