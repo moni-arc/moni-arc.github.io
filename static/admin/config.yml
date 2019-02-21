@@ -60,7 +60,7 @@ collections:
             name: 'templateKey',
             widget: 'hidden',
           }
-          - {label: 'Title', name: 'title', widget: 'strings'}
+          - {label: 'Title', name: 'title', widget: 'string'}
           - {label: 'Image', name: 'image', widget: 'image'}
           - {label: 'Heading', name: 'heading', widget: 'string'}
           - {label: 'Subheading', name: 'subheading', widget: 'string'}
