@@ -3,33 +3,74 @@ backend:
   repo: moni-arc/moni-arc.github.io
   branch: source
 
-media_folder: static/assets
-public_folder: assets
+media_folder: static/img
+public_folder: /img
 
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
+  - name: 'artwork'
+    label: 'Artwork'
+    folder: 'src/pages/artwork'
     create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - {name: path, label: Path}
-      - {name: date, label: Date, widget: date}
-      - {name: title, label: Title}
-      - {name: body, label: Body, widget: markdown}
-  - name: artwork
-    label: Artwork
-    folder: artwork
+      - {
+          default: 'artwork-post',
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+        }
+      - {label: 'Title', name: 'title', widget: 'string'}
+      - {label: 'Publish Date', name: 'postDate', widget: 'date'}
+      - {label: 'Creation Date', name: 'creationDate', widget: 'date'}
+      - {label: 'Description', name: 'description'}
+      - {label: 'Main Image', name: 'mainImage', widget: 'image'}
+      - {
+          label: 'Additional Images',
+          name: 'additionalImages',
+          widget: 'list',
+          fields:
+            - {label: 'Image', name: 'image', widget: 'image'}
+            - {label: 'Description', name: 'description'}
+        }
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'src/pages/blog'
     create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - {name: path, label: Path}
-      - {name: postDate, label: Post Date, widget: date}
-      - {name: creationDate, label Creation Date, widget: date}
-      - {name: title, label: Title}
-      - {name: description, label: Description}
-      - {name: mainImage, label: Main Image, widget: image}
-      - name: additionalImages
-        label: Additional Images
-        widget: list
+      - {
+          default: 'blog-post',
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+        }
+      - {label: 'Title', name: 'title', widget: 'string'}
+      - {label: 'Publish Date', name: 'date', widget: 'datetime'}
+      - {label: 'Description', name: 'description', widget: 'text'}
+      - {label: 'Body', name: 'body', widget: 'markdown'}
+      - {label: 'Tags', name: 'tags', widget: 'list'}
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - file: 'src/pages/index.md'
+        label: 'Landing Page'
+        name: 'Index Page'
         fields:
-          - {name: image, label: Image, widget: image}
-          - {name: description, label: Description}
+          - {
+            default: 'index-page',
+            label: 'Template Key',
+            name: 'templateKey',
+            widget: 'hidden',
+          }
+          - {label: 'Title', name: 'title', widget: 'strings'}
+          - {label: 'Image', name: 'image', widget: 'image'}
+          - {label: 'Heading', name: 'heading', widget: 'string'}
+          - {label: 'Subheading', name: 'subheading', widget: 'string'}
+          - {label: 'Main', name: 'main', widget: 'markdown'}
+      - file: 'src/pages/about/index.md'
+        label: 'About'
+        name: 'about'
+        fields:
+          - {label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'about-page'}
+          - {label: 'Title', name: 'title', widget: 'string'}
+          - {label: 'Body', name: 'body', widget: 'markdown'}
