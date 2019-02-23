@@ -1,4 +1,7 @@
+import React from 'react'
 import {graphql} from 'gatsby'
+
+import {Layout} from '../components/layout'
 
 export const IndexPageTemplate = () => <div />
 
@@ -16,10 +19,10 @@ type IndexPageProps = {
 }
 
 const IndexPage = (props: IndexPageProps) => (
-  <div>
+  <Layout>
     <h1>{props.data.markdownRemark.frontmatter.heading}</h1>
     <div dangerouslySetInnerHTML={{__html: props.data.markdownRemark.html}} />
-  </div>
+  </Layout>
 )
 
 export default IndexPage
