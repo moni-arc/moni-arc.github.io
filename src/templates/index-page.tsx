@@ -20,7 +20,7 @@ type IndexPageProps = {
 
 const IndexPage = (props: IndexPageProps) => (
   <Layout>
-    <h1>{props.data.markdownRemark.frontmatter.heading}</h1>
+    <h4>{props.data.markdownRemark.frontmatter.heading}</h4>
     <div dangerouslySetInnerHTML={{__html: props.data.markdownRemark.html}} />
   </Layout>
 )
