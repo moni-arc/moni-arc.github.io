@@ -22,14 +22,6 @@ export const Layout = ({children}) => (
           <html lang="en" />
           <title>{data.site.siteMetadata.title}</title>
           <meta name="theme-color" content={colors.viridianGreen} />
-          <meta
-            name="apple-mobile-web-app-status-bar-style"
-            content={colors.viridianGreen}
-          />
-          <meta
-            name="msapplication-navbutton-color"
-            content={colors.viridianGreen}
-          />
         </Helmet>
         <nav
           css={{
